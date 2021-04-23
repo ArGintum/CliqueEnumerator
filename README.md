@@ -3,7 +3,7 @@ Python+Boost implementation of parallel clique enumerator.
 
 ### Building
 
-Для сборки библиотеки необходим python3, библиотеки Boost-Python и Boost-Numpy выполнить
+Для сборки библиотеки необходим python3, библиотеки Boost-Python и Boost-Numpy. Для сборки выполнить
 ```
 $ python3 setup.py build_ext --inplace
 ```
