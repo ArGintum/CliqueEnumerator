@@ -18,16 +18,16 @@ import CliqueEnumerator
 ```
 >>> edge_list = [[1,2], [3,4], ..... ]
 >>> max_size = 5
->>> num_workers = 4
+>>> num_workers = 2
 ```
 
 Вычисление
 ```
->>> results = CliqueEnumerator.enumerate_cliques(edge_list, max_size, num_workers)
+>>> results = CliqueEnumerator.enumerate_cliques(edge_list, max_size, num_workers) # будут использованы только num_workers ядер
 
 OR
 
->>> results = CliqueEnumerator.enumerate_cliques(edge_list, max_size)
+>>> results = CliqueEnumerator.enumerate_cliques(edge_list, max_size) # будут использованы все доступные CPU
 ```
 
 Формат выходных данных:
