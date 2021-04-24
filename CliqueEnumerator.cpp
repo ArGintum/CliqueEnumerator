@@ -26,7 +26,7 @@ typedef std::vector<V> Clique;
 
 typedef boost::adjacency_list<boost::listS, boost::vecS, boost::directedS> Graph;
 
-void build_k_clique(const Graph& graph, unsigned int k, Clique current_clique, auto& candidates, std::vector<Clique>& cliques) {
+void build_k_clique(const Graph& graph, unsigned int k, Clique current_clique, std::vector<V>& candidates, std::vector<Clique>& cliques) {
     if (2 < current_clique.size() && current_clique.size() <= k) {
         cliques.push_back(current_clique);
     }
@@ -74,7 +74,7 @@ void parallel_process(const Graph& graph, unsigned int k, std::atomic<bool>* mas
     }
 }
 
-std::vector<std::vector<Clique> > count_cliques(const auto& edges_list, unsigned int k, unsigned num_threads = 4) {
+std::vector<std::vector<Clique> > count_cliques(const std::vector<E>& edges_list, unsigned int k, unsigned num_threads = 4) {
     // Input: edges_list -- list of all edges in graph
     //        num_threads - number of threads to multiprocess.
 
